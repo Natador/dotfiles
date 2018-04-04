@@ -1,0 +1,25 @@
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
+filetype plugin on
+filetype indent on
+set mouse=a
+set number
+set clipboard=unnamed
+
+execute pathogen#infect()
+
+"" MuComplete settings
+set completeopt+=menuone
+inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
+inoremap <expr> <c-y> mucomplete#popup_exit("\<c-y>")
+noremap <expr>  <cr> mucomplete#popup_exit("\<cr>")
+
+set completeopt+=noselect
+set completeopt+=noinsert
+set shortmess+=c
+set belloff+=ctrlg
+
+syntax on
+set background=dark
+colorscheme solarized
